@@ -8,11 +8,13 @@ class MyMemes extends Component{
         {
           this.props.myMemes.map((meme,index) => {
             return(
+              <a download={"my-meme.jpg"}
+                 href={meme.data.url}>
               <img
                 key={index}
                 src={meme.data.url}
                 alt="my-meme"
-                className="my-meme-img"/>
+                className="my-meme-img"/></a>
             )
           })
         }
